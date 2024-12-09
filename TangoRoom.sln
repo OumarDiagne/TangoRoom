@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TangoRoom.Server", "TangoRoom.Server\TangoRoom.Server.csproj", "{E13E7985-7177-413B-95C3-D9AD34596C79}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tangoroom.client", "tangoroom.client\tangoroom.client.esproj", "{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E13E7985-7177-413B-95C3-D9AD34596C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13E7985-7177-413B-95C3-D9AD34596C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13E7985-7177-413B-95C3-D9AD34596C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13E7985-7177-413B-95C3-D9AD34596C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB6403D-E75E-43CD-889C-F37EAE8DFB23}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10EC10E9-29C6-4DED-B2CF-9CE72D790D46}
+	EndGlobalSection
+EndGlobal
