@@ -1,12 +1,12 @@
 ﻿namespace TangoRoom.Server.models
 {
+
+
     public class Inscription
     {
-        public int IdInscription { get; set; }
-        public required string Name { get; set; }
-        public string Description { get; set; } = "porec";
-
-
-
+        public int IdLeader { get; set; }
+        public int IdFollower { get; set; }
+        public int IdMarathon { get; set; }
+        public DateTime DateMatchUp { get; set; }
     }
 }
