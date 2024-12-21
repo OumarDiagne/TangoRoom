@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TangoRoom.Server.models;
+using TangoRoom.Server.Models;
 
 namespace TangoRoom.Server.Controllers
 {

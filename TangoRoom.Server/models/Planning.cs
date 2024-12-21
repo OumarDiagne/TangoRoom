@@ -1,11 +1,11 @@
-﻿namespace TangoRoom.Server.models
+﻿namespace TangoRoom.Server.Models
 {
 
     public class Planning
     {
 
         public int IdPlanning { get; set; }
-        public required string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         public List<Marathon> ListeMarathons { get; set; } = [];
     }
 }

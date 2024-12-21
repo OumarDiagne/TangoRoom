@@ -1,4 +1,4 @@
-﻿namespace TangoRoom.Server.models
+﻿namespace TangoRoom.Server.Models
 {
 
 

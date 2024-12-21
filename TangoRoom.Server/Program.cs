@@ -1,8 +1,5 @@
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Identity.Abstractions;
-using Microsoft.Identity.Web;
-using Microsoft.Identity.Web.Resource;
+using Microsoft.EntityFrameworkCore;
+using TangoRoom.Server.Models.Data;
 
 namespace TangoRoom.Server
 {
@@ -11,10 +8,14 @@ namespace TangoRoom.Server
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            string? connect = builder.Configuration.GetConnectionString("TangoRoomConnect");
 
             // Add services to the container.
-            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+            //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
+            //Enregistre la classe de contexte de donnée comme service en lui indiquant la connexion a utiliser
+            builder.Services.AddDbContext<ContextTangoRoom>(opt => opt.UseSqlServer(connect));
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
