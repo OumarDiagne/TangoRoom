@@ -2,27 +2,29 @@
 {
     public enum StatutPersonnel { pas_interessé, disponible, inscrit }
 
-    public abstract class Utilisateur
+
+    public class Utilisateur
     {
         public int IdUtilisateur { get; set; }
         public string Email { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
-        public Planning Planning { get; set; } = new Planning();
-        public Role Role { get; set; } = new Role();
         public StatutPersonnel StatutPersonnel { get; set; }
-
-    }
-
-    public class Leader : Utilisateur
-    {
+        public int IdRole { get; set; }
+        public virtual List<Marathon> Planning { get; set; } = [];
+        public string Link { get; set; } = string.Empty;
+        public bool ValideInscription { get; set; }
 
 
     }
 
     public class Follower : Utilisateur
     {
-
+        public string TextInvitation { get; set; } = string.Empty;
+    }
+    public class Leader : Utilisateur
+    {
 
     }
+
 
 }
