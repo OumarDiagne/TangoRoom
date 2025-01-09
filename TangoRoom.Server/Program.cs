@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using TangoRoom.Server.Interfaces;
 using TangoRoom.Server.Models.Data;
+using TangoRoom.Server.Services;
 
 namespace TangoRoom.Server
 {
@@ -16,6 +18,11 @@ namespace TangoRoom.Server
 
             //Enregistre la classe de contexte de donnée comme service en lui indiquant la connexion a utiliser
             builder.Services.AddDbContext<ContextTangoRoom>(opt => opt.UseSqlServer(connect));
+
+            //injection services modeles
+            builder.Services.AddScoped<IUtilisateurService, UtilisateurService>();
+            builder.Services.AddScoped<IMarathonService, MarathonService>();
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
